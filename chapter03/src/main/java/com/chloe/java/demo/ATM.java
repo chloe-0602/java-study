@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class ATM {
     public static void main(String[] args) {
-        int balance = 0;
+        double balance = 0.0;
 
         boolean isFlag = true;
         int operator = 0;
@@ -33,12 +33,22 @@ public class ATM {
             switch (operator){
                 case 1:
                     System.out.print("存款：");
-                    balance += scanner.nextInt();
+                    double addMoney = scanner.nextDouble();
+                    if(addMoney > 0){
+                        balance += addMoney;
+                    }else {
+                        System.out.println("存款需要大于0！");
+                    }
                     System.out.println("--存款完成--");
                     break;
                 case 2:
                     System.out.print("取款：");
-                    balance -= scanner.nextInt();
+                    double minusMoney = scanner.nextDouble();
+                    if(minusMoney > 0 && balance >= minusMoney){
+                        balance -= minusMoney;
+                    }else{
+                        System.out.println("您输入的数据非法或余额不足");
+                    }
                     System.out.println("--取款完成--");
                     break;
                 case 3:
@@ -47,6 +57,7 @@ public class ATM {
                     break;
                 case 4:
                     System.out.println("--退出--");
+                    System.out.println("欢迎下次进入此系统。^_^");
                     isFlag = false;
                     break;
                 default:
