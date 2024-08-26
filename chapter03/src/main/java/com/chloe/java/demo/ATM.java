@@ -49,6 +49,8 @@ public class ATM {
                     System.out.println("--退出--");
                     isFlag = false;
                     break;
+                default:
+                    System.out.println("输入有误，请重新输入~");
             }
 
         }while(isFlag);
