@@ -1,7 +1,8 @@
 
 数组工具类Arrays的使用 (熟悉)
 
-1. Arrays类所在位置
+1. Arrays类所在位置: java.util包下
 
 2. 作用：
+java.util.Arrays作为操作数组的工具类，包含了操作数组的各种方法
 

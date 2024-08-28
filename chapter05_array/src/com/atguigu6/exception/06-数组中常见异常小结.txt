@@ -2,7 +2,8 @@
 
 
 1. 数组的使用中常见的异常小结
-
+索引越界：ArrayIndexOutofBoundsException
+空指针异常：NullPointerException
 
 
 2. 出现异常会怎样？如何处理？
