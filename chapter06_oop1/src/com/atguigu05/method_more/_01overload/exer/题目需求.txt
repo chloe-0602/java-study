@@ -1,18 +1,18 @@
 
 练习1：判断与void show(int a,char b,double c){}构成重载的有：
-a)void show(int x,char y,double z){}     //
+a)void show(int x,char y,double z){}     //yes
 
-b)int show(int a,double c,char b){}      //
+b)int show(int a,double c,char b){}      //yes
 
-c) void show(int a,double c,char b){}    //
+c) void show(int a,double c,char b){}    //yes
 
-d) boolean show(int c,char b){}          //
+d) boolean show(int c,char b){}          //yes
 
-e) void show(double c){}                 //
+e) void show(double c){}                 //yes
 
-f) double show(int x,char y,double z){}  //
+f) double show(int x,char y,double z){}  //no
 
-g) void shows(){double c}                //
+g) void shows(){double c}                //no
 
 练习2：
 编写程序，定义三个重载方法并调用。方法名为mOL。

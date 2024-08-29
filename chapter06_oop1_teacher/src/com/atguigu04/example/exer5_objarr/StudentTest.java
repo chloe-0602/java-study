@@ -10,7 +10,7 @@ package com.atguigu04.example.exer5_objarr;
  * @Create 14:36
  * @Version 1.0
  */
-public class StudentTest {
+public class  StudentTest {
     public static void main(String[] args) {
 
         //创建Student[]

@@ -8,7 +8,7 @@ public class InterviewTest {
 		System.out.println(arr);//
 		
 		char[] arr1 = new char[]{'a','b','c'};
-		System.out.println(arr1);//
+		System.out.println(arr1);// 为什么变成了abc
 		
 		boolean[] arr2 = new boolean[]{false,true,true};
 		System.out.println(arr2);//
