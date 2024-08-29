@@ -5,5 +5,10 @@ package com.atguigu01.oop;
  * @create 16:26
  */
 public class Phone {
+     String name;
+     double price;
+    public void call(){
+        System.out.println("call....");
+    }
 
 }
