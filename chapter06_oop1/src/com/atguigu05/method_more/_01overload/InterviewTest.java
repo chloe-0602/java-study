@@ -8,7 +8,7 @@ public class InterviewTest {
 		System.out.println(arr);//
 		
 		char[] arr1 = new char[]{'a','b','c'};
-		System.out.println(arr1);// 为什么变成了abc
+		System.out.println(arr1);// 为什么变成了abc==？ 是因为调用了String吗
 		
 		boolean[] arr2 = new boolean[]{false,true,true};
 		System.out.println(arr2);//
