@@ -9,12 +9,10 @@
 
 1. 为什么需要方法的重写？
 
-子类在继承父类以后，就获取了父类中声明的所有的方法。但是，父类中的方法可能不太适用于子类，换句话说，子类
-需要对父类中继承过来的方法进行覆盖、覆写的操作。
-
+子类在继承父类以后，就获取了父类中声明的所有的方法。
+但是，父类中的方法可能不太适用于子类，换句话说，子类、覆写的操作。
 
 举例（银行账户）：
-
 class Account{//账户
     double balance;//余额
 
@@ -66,13 +64,10 @@ class AccountTest{
 
 
 4. 面试题：区分方法的重载(overload)与重写(override / overwrite)
-
 重载：“两同一不同”
 重写：继承以后，子类覆盖父类中同名同参数的方法
 
-
 [类比]相同类型的面试题：
-
 throws / throw
 final / finally / finalize
 Collection / Collections
@@ -80,7 +75,6 @@ String / StringBuffer / StringBuilder
 ArrayList / LinkedList
 HashMap / LinkedHashMap / Hashtable
 ...
-
 
 sleep() / wait()
 == / equals()
