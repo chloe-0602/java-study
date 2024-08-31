@@ -35,7 +35,7 @@ public class Student extends Person {
         eat(); //省略了this
         this.eat();
 
-        super.eat();
+        super.eat();// 权限需要足够
     }
 
     public void show1(){
