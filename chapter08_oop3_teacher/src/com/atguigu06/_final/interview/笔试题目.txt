@@ -13,7 +13,7 @@ public class Something {
         Other o = new Other();
         new Something().addOne(o);
     }
-    public void addOne(final Other o) {
+    public void addOne(final Other o) { // 注意是Other进行的final，只要地址值不变就行
         // o = new Other();
         o.i++;
     }
