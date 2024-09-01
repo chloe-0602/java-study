@@ -21,15 +21,15 @@ class Sub extends Base {
 public class FieldMethodTest {
     public static void main(String[] args){
         Sub s = new Sub();
-        System.out.println(s.count);//
-        s.display();//
+        System.out.println(s.count);//20
+        s.display();//20
         Base b = s;
-        System.out.println(b == s); //
-        System.out.println(b.count);//
-        b.display();//
+        System.out.println(b == s); //true 地址一样！！！
+        System.out.println(b.count);//10
+        b.display();//20
 
         Base b1 = new Base();
-        System.out.println(b1.count); //
-        b1.display();//
+        System.out.println(b1.count); //10
+        b1.display();//10
     }
 }

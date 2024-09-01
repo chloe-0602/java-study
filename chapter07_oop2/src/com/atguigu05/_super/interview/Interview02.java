@@ -33,4 +33,9 @@ class Son extends Father{
         System.out.println(this.getInfo());
         System.out.println(super.getInfo());
     }
+
+    @Override
+    public String getInfo() {
+        return info;
+    }
 }

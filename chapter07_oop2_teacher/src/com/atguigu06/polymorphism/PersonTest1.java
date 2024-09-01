@@ -27,7 +27,7 @@ public class PersonTest1 {
         * 向下转型可能会出现：类型转换异常（ClassCastException）
         * */
         Person p2 = new Woman();
-//        Man m2 = (Man)p2;
+//        Man m2 = (Man)p2; //  ClassCastException 但编译的时候不会报错，因为语法没问题
 //        m2.earnMoney();
 
         /*
@@ -36,6 +36,7 @@ public class PersonTest1 {
         * 3. 如果a instanceOf A 返回true，则：
         *       a instanceOf superA 返回也是true。其中，A 是superA的子类。
         * */
+        System.out.println("--------------------");
         if(p2 instanceof Man){
             Man m2 = (Man)p2;
             m2.earnMoney();

@@ -5,7 +5,7 @@ public class FinalizeTest {
 		Person p = new Person("Peter", 12);
 		System.out.println(p);
 		p = null;//此时对象实体就是垃圾对象，等待被回收。但时间不确定。
-		System.gc();//强制性释放空间
+		System.gc();//强制性释放空间-》 走的是finalize
 
 		try {
 			Thread.sleep(1000);
@@ -42,6 +42,9 @@ class Person{
 	//finalize()可能导致内部出现循环引用，导致此对象不能被回收。
 	@Override
 	protected void finalize() throws Throwable {
+		// 临死之前有什么遗言
+		// 比如说将信息存在 磁盘上
+		// 自己调的，gc触发的
 		System.out.println("对象被释放--->" + this);
 	}
 }

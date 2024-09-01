@@ -13,6 +13,7 @@ public class ToStringTest {
         System.out.println(u1.toString());//com.atguigu07.object.tostring.User@1b6d3586 --> User{ name = Tom, age = 12}
         System.out.println(u1);//com.atguigu07.object.tostring.User@1b6d3586 -> User{ name = Tom, age = 12}
 
+        System.out.println("-------------------------");
         String s1 = new String("hello");
         System.out.println(s1.toString());
 

@@ -70,7 +70,7 @@ class User{
 //        return false;
 //    }
 
-    //IDEA自动实现
+    //IDEA自动实现，后面比较大小需要自己写
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

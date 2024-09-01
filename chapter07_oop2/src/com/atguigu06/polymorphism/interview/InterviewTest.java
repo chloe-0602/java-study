@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * 面试题：多态是编译时行为还是运行时行为？
+ *  --运行时
  *
  * @author 尚硅谷-宋红康
  * @create 15:44
@@ -46,7 +47,7 @@ public class InterviewTest {
     }
 
     public static void main(String[] args) {
-        int key = new Random().nextInt(3);
+        int key = new Random().nextInt(3);//0,1,2 从0开始到边界(bound)不包含边界
         System.out.println(key);
 
         Animal  animal = getInstance(key);

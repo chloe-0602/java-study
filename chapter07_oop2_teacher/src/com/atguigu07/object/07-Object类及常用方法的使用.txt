@@ -14,10 +14,13 @@ Object类的概述
 2. 常用方法
    重点方法：equals() \ toString()
    了解方法：clone() \ finalize()
-   目前不需要关注：getClass() \ hashCode() \ notify() \ notifyAll() \ wait() \ wait(xx) \ wait(xx,yy)
+   目前不需要关注：getClass()
+                hashCode() 是当前对象的标识，但不是唯一标识；用法：到时候集合，到底放在哪里，就用到
+                notify() \ notifyAll() \ wait() \ wait(xx) \ wait(xx,yy)：线程通信
 
 
 面试题：final 、 finally 、 finalize 的区别
+
 
 3. equals()的使用
 
@@ -33,6 +36,9 @@ public boolean equals(Object obj) {
 3.3 子类使用说明：
 > 自定义的类在没有重写Object中equals()方法的情况下，调用的就是Object类中声明的equals()，比较两个
   对象的引用地址是否相同。（或比较两个对象是否指向了堆空间中的同一个对象实体）
+    public boolean equals(Object obj) {
+        return (this == obj);
+    }
 
 > 对于像String、File、Date和包装类等，它们都重写了Object类中的equals()方法，用于比较两个对象的
   实体内容是否相等。

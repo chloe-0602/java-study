@@ -36,7 +36,10 @@
 
 
 4.3 子类使用说明：
-
+> 自定义的类，在没有重写Object类的toString()的情况下，默认返回的是当前对象的地址值。
+> 像String、File、Date或包装类等Object的子类，它们都重写了Object类的toString()，在调用toString()时，
+  返回当前对象的实体内容。
 
 4.4 开发中使用说明：
-
+> 习惯上，开发中对于自定义的类在调用toString()时，也希望显示其对象的实体内容，而非地址值。这时候，就需要重写Object
+ 类中的toString().
