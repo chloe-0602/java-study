@@ -11,10 +11,14 @@ package com.atguigu01._static;
 public class ChineseTest {
     public static void main(String[] args) {
 
+        // 静态变量，随着类的加载而加载
+        // 类只会加载一次，所以也是一次
+        System.out.println(Chinese.nation);
+        Chinese.nation = "中国";
         System.out.println(Chinese.nation);
         Chinese.show();
 
-
+        System.out.println("-----------");
         Chinese c1 = new Chinese();
         c1.name = "姚明";
         c1.age = 40;
@@ -37,6 +41,7 @@ public class ChineseTest {
 
         c1.show();
 
+        System.out.println("-------------");
         ChineseTest.test();
     }
 
