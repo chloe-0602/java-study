@@ -8,7 +8,7 @@ package com.atguigu07._abstract;
  * @Create 14:32
  * @Version 1.0
  */
-public abstract class Person extends Creature{ //抽象类
+public abstract class Person extends Creature{ //抽象类，不能实例化
     String name;
     int age;
 
