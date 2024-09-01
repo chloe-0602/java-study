@@ -32,7 +32,7 @@ public interface CompareA {
     }
 
     //jdk9新特性：定义私有方法
-//    private void method5(){
-//        System.out.println("我是接口中定义的私有方法");
-//    }
+    private void method5(){
+        System.out.println("我是接口中定义的私有方法");
+    }
 }
