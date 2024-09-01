@@ -6,6 +6,12 @@ package com.atguigu05.field.interview;
  */
 public class Test03 {
     public static void main(String[] args) {
+        /**
+         * base
+         * sub : 100 ->注意这个是子类的方法 重写！！！！
+         * sub
+         * base : 70
+         */
         Sub s = new Sub();
     }
 }

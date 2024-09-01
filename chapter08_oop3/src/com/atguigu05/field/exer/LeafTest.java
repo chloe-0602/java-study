@@ -1,6 +1,6 @@
 package com.atguigu05.field.exer;
 
-//技巧：
+//技巧：由父及子， 静态先行
 
 class Root{
 	static{
@@ -47,6 +47,7 @@ public class LeafTest{
 	public static void main(String[] args){
 		new Leaf(); 
 		System.out.println();
+		// 没有类的加载
 		new Leaf();
 	}
 }

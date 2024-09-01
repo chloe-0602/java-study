@@ -18,11 +18,11 @@ public class FieldTest {
 class Order{
 
 
+    {
+        orderId = 2; // 不会报错
+    }
     int orderId = 1;
 
-    {
-        orderId = 2;
-    }
 
     public Order(){
         super();
@@ -35,7 +35,7 @@ class Order{
 
     public void eat(){
         sleep();
-    }
+    }// sleep()在方法区加载了，所以调用不报错
 
     public void sleep(){
 
