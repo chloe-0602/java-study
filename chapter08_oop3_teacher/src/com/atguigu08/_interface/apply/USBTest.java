@@ -22,7 +22,7 @@ public class USBTest {
         computer.transferData(new Camera());
         System.out.println();
 
-        //3.创建接口匿名实现类的对象
+        //3.创建接口匿名实现类的对象（实现类没有名了）
         USB usb1 = new USB(){
             public void start(){
                 System.out.println("U盘开始工作");

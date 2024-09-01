@@ -34,7 +34,14 @@ interface Flyable{  //接口
     int MAX_SPEED = 7900;
 
     //方法可以省略public abstract 声明
-    void fly();
+     void fly();
+     private void test(){
+
+     }
+
+     static void test1(){
+
+     }
 }
 
 interface Attackable{ //接口
@@ -68,7 +75,7 @@ interface BB{
     void method2();
 }
 
-interface CC extends AA,BB{ //接口可以多继承
+interface CC extends AA,BB{ //接口可以多继承（接口和接口之间的关系）
 
 }
 
