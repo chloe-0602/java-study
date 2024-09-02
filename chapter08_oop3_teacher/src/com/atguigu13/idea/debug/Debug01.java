@@ -20,14 +20,14 @@ public class Debug01 {
         System.out.println("m = " + m + ",n = " + n);
 
         //2.
-        int[] arr = new int[] {1,2,3,4,5};
+        int[] arr = new int[]{1, 2, 3, 4, 5};
         System.out.println(arr);//地址值
 
-        char[] arr1 = new char[] {'a','b','c'};
+        char[] arr1 = new char[]{'a', 'b', 'c'};
         System.out.println(arr1);//abc
     }
 
-    public static void swap(int m,int n){
+    public static void swap(int m, int n) {
         int temp = m;
         m = n;
         n = temp;

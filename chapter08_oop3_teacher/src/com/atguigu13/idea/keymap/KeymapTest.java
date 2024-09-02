@@ -1,5 +1,6 @@
 package com.atguigu13.idea.keymap;
 
+
 import java.util.Date;
 
 /**
@@ -18,17 +19,17 @@ public class KeymapTest {
 
         System.out.println("hello");
 
-        String str123 = null;
+        String str12 = null;
         for (int i = 1; i <= 10; i++) {
 
-            str123 = new String("hello");
-            str123 += "123";
-            System.out.println(str123.toString());
+            str12 += "123";
+            str12 = new String("hello");
+            System.out.println(str12.toString());
 
 
         }
 
-        method1(str123);
+        method1(str12);
         /*HashMap map1 = new HashMap();
         map1.put("Tom", 89);
 
@@ -94,6 +95,10 @@ interface BB {
 }
 
 class Student extends Person implements AA, BB {
+
+    public Student() {
+        super();
+    }
 
     @Override
     public void eat() {
