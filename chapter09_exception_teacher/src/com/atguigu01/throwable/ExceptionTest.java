@@ -2,6 +2,10 @@ package com.atguigu01.throwable;
 
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -86,21 +90,23 @@ public class ExceptionTest {
     @Test
     public void test7(){
 //        Class clz = Class.forName("java.lang.String");
+//        Class.forName("hhh");
     }
 
     @Test
-    public void test8() {
+    public void test8() throws FileNotFoundException, IOException {
+        File file = new File("D:\\hello.txt");
 //        File file = new File("D:\\hello.txt");
-//
-//        FileInputStream fis = new FileInputStream(file); //可能报FileNotFoundException
-//
-//        int data = fis.read(); //可能报IOException
-//        while(data != -1){
-//            System.out.print((char)data);
-//            data = fis.read(); //可能报IOException
-//        }
-//
-//        fis.close(); //可能报IOException
+
+        FileInputStream fis = new FileInputStream(file); //可能报FileNotFoundException
+
+        int data = fis.read(); //可能报IOException
+        while(data != -1){
+            System.out.print((char)data);
+            data = fis.read(); //可能报IOException
+        }
+
+        fis.close(); //可能报IOException
 
     }
 }

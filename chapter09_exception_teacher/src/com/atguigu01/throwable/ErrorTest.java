@@ -11,7 +11,7 @@ public class ErrorTest {
 //        main(args);
 
         //举例2：OutOfMemoryError: Java heap space
-//        byte[] arr = new byte[1024 * 1024 * 100]; //100mb
+        byte[] arr = new byte[1024 * 1024 * 100]; //100mb
 
     }
 }
