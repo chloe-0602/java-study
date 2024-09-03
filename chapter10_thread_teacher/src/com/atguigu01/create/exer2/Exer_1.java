@@ -10,7 +10,7 @@ package com.atguigu01.create.exer2;
  */
 public class Exer_1 {
     public static void main(String[] args) {
-//        BB b = new BB();
+        BB b = new BB();
 //        new Thread(b){
 ////            @Override
 ////            public void run() {

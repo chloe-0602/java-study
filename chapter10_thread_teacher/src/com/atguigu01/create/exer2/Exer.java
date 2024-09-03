@@ -32,7 +32,7 @@ class B extends Thread {
 //    }
 
     public B(A a){
-        super(a);
+        super( );
     }
 
 //    @Override

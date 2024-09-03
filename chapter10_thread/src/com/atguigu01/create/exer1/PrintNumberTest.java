@@ -17,8 +17,34 @@ public class PrintNumberTest {
 //        OddNumberPrint oddNumberPrint = new OddNumberPrint();
 //        oddNumberPrint.start();
 
+        // 方式1
         // 创建Thread类的 匿名子类的 匿名对象
-        new Thread(){
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                for (int i = 0; i < 100; i++) {
+//                    if (i % 2 == 0) {
+//                        System.out.println(Thread.currentThread().getName() + " 打印偶数：" + i);
+//                        System.out.println("-------------------");
+//                    }
+//                }
+//            }
+//        }.start();
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                for (int i = 0; i < 100; i++) {
+//                    if (i % 2 != 0) {
+//                        System.out.println(Thread.currentThread().getName() + " 打印奇数：" + i);
+////                System.out.println("******************");
+//                    }
+//                }
+//            }
+//        }.start();
+
+        // Runnable接口 的 匿名实现类 作为构造器参数 的 Thread 的 匿名对象
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < 100; i++) {
@@ -28,19 +54,7 @@ public class PrintNumberTest {
                     }
                 }
             }
-        }.start();
-
-        new Thread(){
-            @Override
-            public void run() {
-                for (int i = 0; i < 100; i++) {
-                    if (i % 2 != 0) {
-                        System.out.println(Thread.currentThread().getName() + " 打印奇数：" + i);
-//                System.out.println("******************");
-                    }
-                }
-            }
-        }.start();
+        }).start();
     }
 }
 
