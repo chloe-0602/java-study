@@ -8,17 +8,19 @@ public class FinallyTest4 {
     public static void main(String[] args) {
         int result = test(10);
         System.out.println(result);
+        System.out.println("----");
+        System.out.println(test(20));
     }
 
     public static int test(int num) {
         try {
-            return num;
+            return --num;
         } catch (NumberFormatException e) {
             return num--;
         } finally {
             System.out.println("test结束");
-//            return ++num;
-            ++num;
+            return ++num;
+//            ++num;
         }
     }
 }

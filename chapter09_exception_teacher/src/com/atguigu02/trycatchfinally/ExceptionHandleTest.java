@@ -22,10 +22,10 @@ public class ExceptionHandleTest {
             int num = scanner.nextInt();
             System.out.println(num);
 
+        } catch(InputMismatchException e){
+            System.out.println("出现了InputMismatchException的异常");
         }catch(NullPointerException e){
             System.out.println("出现了NullPointerException的异常");
-        }catch(InputMismatchException e){
-            System.out.println("出现了InputMismatchException的异常");
         }catch(RuntimeException e){
             System.out.println("出现了RuntimeException的异常");
         }
@@ -73,6 +73,37 @@ public class ExceptionHandleTest {
             e.printStackTrace();
         }catch(IOException e){
             e.printStackTrace();
+        }
+
+        System.out.println("读取数据结束....");
+    }
+
+    @Test
+    public void test4() {
+        FileInputStream fis = null;
+        try{
+
+            File file = new File("D:\\hello.txt");
+
+             fis = new FileInputStream(file); //可能报FileNotFoundException
+
+            int data = fis.read(); //可能报IOException
+            while(data != -1){
+                System.out.print((char)data);
+                data = fis.read(); //可能报IOException
+            }
+
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if(fis != null)
+                    fis.close(); //可能报IOException
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         System.out.println("读取数据结束....");
