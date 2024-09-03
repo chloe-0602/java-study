@@ -21,9 +21,12 @@ class PrintNumber extends Thread{
     public void run() {
 
         for (int i = 1; i <= 100; i++) {
-
+            /**
+             * 为什么Thread.sleep(1000);不可以throws，因为 继承的Thread没有throws
+             */
+//
 //            try {
-//                Thread.sleep(1000);
+//                Thread.sleep(100);
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
@@ -45,30 +48,39 @@ public class EvenNumberTest {
     public static void main(String[] args) {
 
         PrintNumber t1 = new PrintNumber("线程1");
+
         t1.setName("子线程1");
         t1.setPriority(Thread.MIN_PRIORITY);
         t1.start();
-
+//
         Thread.currentThread().setName("主线程");
         Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 
         for (int i = 1; i <= 100; i++) {
             if(i % 2 == 0){
                 System.out.println(Thread.currentThread().getName() + ":" +
-                        Thread.currentThread().getPriority() + ":" + i);
+                        Thread.currentThread().getPriority() + ":" + i +"************");
             }
 
-//            if(i == 20){
-//                try {
-//                    t1.join();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
+            if(i == 20){
+                try {
+                    t1.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
 
-//        System.out.println("子线程1是否存活？" + t1.isAlive());
+        System.out.println("子线程1是否存活？" + t1.isAlive());
+
+//        System.out.println("---------------------");
+//        new Thread("haha线程: "){
+//            @Override
+//            public void run() {
+//                System.out.println(Thread.currentThread().getName()+"yep!");
+//            }
+//        }.start();
 
     }
 
