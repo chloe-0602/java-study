@@ -36,7 +36,7 @@ public class StringMethodTest1 {
         System.out.println(s3.isEmpty());
 
         String s4 = null;
-        System.out.println(s4.isEmpty());//报空指针异常
+//        System.out.println(s4.isEmpty());//报空指针异常， NullPointerException
 
         String s5 = "hello";
         System.out.println(s5.length());//5
@@ -80,8 +80,10 @@ public class StringMethodTest1 {
         System.out.println(s1.contains("硅谷"));
 
         System.out.println(s1.indexOf("教育"));
+        System.out.println(s1.indexOf("教育a"));
         System.out.println(s1.indexOf("教育",1));
 
+        System.out.println();
         System.out.println(s1.lastIndexOf("教育"));
         System.out.println(s1.lastIndexOf("教育",4));
     }
@@ -98,22 +100,22 @@ public class StringMethodTest1 {
 
     /*
     * （18）char charAt(index)：返回[index]位置的字符
-    （19）char[] toCharArray()： 将此字符串转换为一个新的字符数组返回
-    （20）static String valueOf(char[] data)  ：返回指定数组中表示该字符序列的 String
-    （21）static String valueOf(char[] data, int offset, int count) ： 返回指定数组中表示该字符序列的 String
-    （22）static String copyValueOf(char[] data)： 返回指定数组中表示该字符序列的 String
-    （23）static String copyValueOf(char[] data, int offset, int count)：返回指定数组中表示该字符序列的 String
+      （19）char[] toCharArray()： 将此字符串转换为一个新的字符数组返回
+      （20）static String valueOf(char[] data)  ：返回指定数组中表示该字符序列的 String
+      （21）static String valueOf(char[] data, int offset, int count) ： 返回指定数组中表示该字符序列的 String
+      （22）static String copyValueOf(char[] data)： 返回指定数组中表示该字符序列的 String
+      （23）static String copyValueOf(char[] data, int offset, int count)：返回指定数组中表示该字符序列的 String
     * （24）boolean startsWith(xx)：测试此字符串是否以指定的前缀开始
       （25）boolean startsWith(String prefix, int toffset)：测试此字符串从指定索引开始的子字符串是否以指定前缀开始
-     （26）boolean endsWith(xx)：测试此字符串是否以指定的后缀结束
+      （26）boolean endsWith(xx)：测试此字符串是否以指定的后缀结束
     * */
     @Test
     public void test5(){
         String s1 = "教育尚硅谷教育";
         System.out.println(s1.charAt(2));
 
-        String s2 = String.valueOf(new char[]{'a', 'b', 'c'});
-        String s3 = String.copyValueOf(new char[]{'a', 'b', 'c'});
+        String s2 = String.valueOf(new char[]{'a', 'b', 'c'});//new
+        String s3 = String.copyValueOf(new char[]{'a', 'b', 'c'});//new
         System.out.println(s2);
         System.out.println(s3);
         System.out.println(s2 == s3);
@@ -125,9 +127,9 @@ public class StringMethodTest1 {
 
     /*
     * （27）String replace(char oldChar, char newChar)：返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。 不支持正则。
-    （28）String replace(CharSequence target, CharSequence replacement)：使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
-    （29）String replaceAll(String regex, String replacement)：使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。
-    （30）String replaceFirst(String regex, String replacement)：使用给定的 replacement 替换此字符串匹配给定的正则表达式的第一个子字符串。
+      （28）String replace(CharSequence target, CharSequence replacement)：使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
+      （29）String replaceAll(String regex, String replacement)：使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。
+      （30）String replaceFirst(String regex, String replacement)：使用给定的 replacement 替换此字符串匹配给定的正则表达式的第一个子字符串。
     * */
     @Test
     public void test6(){
