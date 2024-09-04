@@ -12,7 +12,7 @@ public class ThreadTest {
 
         // 调用sleep方法
         try {
-            t.sleep(1000 * 5);
+            t.sleep(1000 * 5); //主线程，这里可以理解为对象，主线程去调用
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

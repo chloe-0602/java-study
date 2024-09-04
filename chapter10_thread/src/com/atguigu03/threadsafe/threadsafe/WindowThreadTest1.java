@@ -40,7 +40,7 @@ class WindowThread1 extends Thread{
         if(ticket>0){
             System.out.println(Thread.currentThread().getName()+ "卖出：" + ticket);
             ticket--;
-        }else{
+        }else{  
             isFlag = false;
         }
     }
