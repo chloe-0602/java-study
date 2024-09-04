@@ -13,6 +13,9 @@ import org.junit.Test;
 public class StringDemo1 {
     @Test
     public void test1(){
+        /**
+         * 常量池 和 堆 中的初始化
+         */
         String s1 = "hello";
         String s2 = "hello";
 
@@ -76,7 +79,7 @@ public class StringDemo1 {
 
     @Test
     public void test4(){
-        final String s1 = "hello";
+        final String s1 = "hello";// 就变成常量了！！！！
         final String s2 = "world";
 
         String s3 = "helloworld";

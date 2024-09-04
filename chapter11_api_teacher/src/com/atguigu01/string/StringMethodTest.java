@@ -22,6 +22,7 @@ public class StringMethodTest {
         String s1 = new String();
         String s2 = new String("");
 
+        String s4= new String(new char[]{'a'});
         String s3 = new String(new char[]{'a','b','c'});
         System.out.println(s3);
 
@@ -33,8 +34,10 @@ public class StringMethodTest {
     * 1. String与基本数据类型、包装类之间的转换（复习）
     *
     * 2. String与char[]之间的转换
+    *    char[] -> string: new
+    *    string -> char[]: string.toCharArray()
     *
-    * 3. String与byte[]之间的转换（难度）
+    * 3. String与byte[]之间的转换（难度） byte 字符
     * */
     @Test
     public void test2(){
@@ -67,7 +70,7 @@ public class StringMethodTest {
     }
 
     //String与byte[]之间的转换（难度）
-    /*
+    /*UTF-8：兼容ASCII
     * 在utf-8字符集中，一个汉字占用3个字节，一个字母占用1个字节。
     * 在gbk字符集中，一个汉字占用2个字节，一个字母占用1个字节。
     *
@@ -84,11 +87,15 @@ public class StringMethodTest {
         String str = new String("abc中国");
 
         //String -->byte[]:调用String的getBytes()
+        /**
+         * 字符集问题
+         * UTF-8：兼容ASCII
+         */
         byte[] arr = str.getBytes(); //使用默认的字符集:utf-8
         for (int i = 0;i < arr.length;i++){
             System.out.println(arr[i]);
         }
-        System.out.println();
+        System.out.println("-------- gbk 中国的字符集 ---------");
         //getBytes(String charsetName):使用指定的字符集
         byte[] arr1 = str.getBytes("gbk");
         for (int i = 0; i < arr1.length; i++) {
