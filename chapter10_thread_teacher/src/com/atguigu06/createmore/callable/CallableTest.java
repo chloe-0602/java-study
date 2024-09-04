@@ -7,17 +7,18 @@ import java.util.concurrent.FutureTask;
  * 创建多线程的方式三：实现Callable （jdk5.0新增的）
  */
 //1.创建一个实现Callable的实现类
+// 可以对Callable加上泛型 Callable<String>
 class NumThread implements Callable {
     //2.实现call方法，将此线程需要执行的操作声明在call()中
     @Override
     public Object call() throws Exception {
         int sum = 0;
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 10; i++) {
             if (i % 2 == 0) {
                 System.out.println(i);
                 sum += i;
             }
-            Thread.sleep(1000);
+            Thread.sleep(100);
         }
         return sum;
     }
@@ -41,12 +42,15 @@ public class CallableTest {
         try {
             //6.获取Callable中call方法的返回值
             //get()返回值即为FutureTask构造器参数Callable实现类重写的call()的返回值。
+            // 此处因为 要get()来获取返回值，main线程 为阻塞状态，需要等子线程结束之后才可以
             Object sum = futureTask.get();
             System.out.println("总和为：" + sum);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.println("main 结束的位置！");
     }
 
 }
