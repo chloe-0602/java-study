@@ -31,7 +31,7 @@ public class SetTest {
             System.out.println(iterator.next());
         }
 
-//        System.out.println(set.contains(new Person("Tom", 12)));
+//        System.out.println(set.contains(new Person("Tom", 12)));// ashCode 需要实现
     }
 
     @Test

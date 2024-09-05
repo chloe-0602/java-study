@@ -17,7 +17,7 @@ public class HashSetDemo {
         System.out.println(set);
 
         p1.name = "CC";
-        set.remove(p1);
+        set.remove(p1);// 算 hashcode
         System.out.println(set);
 
         set.add(new Person(1001,"CC"));
