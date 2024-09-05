@@ -25,7 +25,7 @@
     增
         add(Object obj)
         addAll(Collection coll)
-    删
+    删 -- 注意用的是哪个remove
         remove(Object obj)
         remove(int index)
     改
