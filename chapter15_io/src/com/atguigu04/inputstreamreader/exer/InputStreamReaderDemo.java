@@ -17,7 +17,7 @@ public class InputStreamReaderDemo {
         try {
             isr = new InputStreamReader(new FileInputStream("康师傅的话.txt"),"gbk");
 
-            osw = new OutputStreamWriter(new FileOutputStream("C:\\Users\\shkstart\\Desktop\\寄语.txt"),"utf-8");
+            osw = new OutputStreamWriter(new FileOutputStream("寄语.txt"),"utf-8");
 
             char[] cbuf = new char[1024];
             int len;

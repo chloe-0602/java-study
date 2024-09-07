@@ -56,7 +56,7 @@ public class ObjectInputOutputStreamTest {
     }
 
     //演示自定义类的对象的序列化和反序列化过程
-    //序列化过程：
+    //序列化过程： 写出
     @Test
     public void test3() throws IOException {
         //1.

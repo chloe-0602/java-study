@@ -100,7 +100,6 @@ public class InputStreamReaderTest {
         //参数2对应的是解码集，必须与dbcp_gbk.txt的编码集一致。
         InputStreamReader isr = new InputStreamReader(fis,"GBK");
 
-
         FileOutputStream fos = new FileOutputStream(file2);
         //参数2指明内存中的字符存储到文件中的字节过程中使用的编码集。
         OutputStreamWriter osw = new OutputStreamWriter(fos,"utf8");
@@ -117,7 +116,5 @@ public class InputStreamReaderTest {
         //4. 关闭资源
         osw.close();
         isr.close();
-
-
     }
 }

@@ -19,9 +19,9 @@ ObjectOutputStream
 
 
 4.如下两个过程使用的流：
-序列化过程：使用ObjectOutputStream流实现。将内存中的Java对象保存在文件中或通过网络传输出去
+序列化过程（写数据）：使用ObjectOutputStream流实现。将内存中的Java对象保存在文件中或通过网络传输出去
 
-反序列化过程：使用ObjectInputSteam流实现。将文件中的数据或网络传输过来的数据还原为内存中的Java对象
+反序列化过程（读数据）：使用ObjectInputSteam流实现。将文件中的数据或网络传输过来的数据还原为内存中的Java对象
 
 
 5.自定义类要想实现序列化机制，需要满足：

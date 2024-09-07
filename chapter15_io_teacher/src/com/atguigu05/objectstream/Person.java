@@ -11,8 +11,8 @@ import java.io.Serializable;
  * @Version 1.0
  */
 public class Person implements Serializable { //Serializable:属于一个标识接口
-    String name;
-    int age;
+    transient String name;
+    static int age;
 
     int id;
 
