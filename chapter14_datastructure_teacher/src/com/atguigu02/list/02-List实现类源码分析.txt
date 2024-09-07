@@ -29,7 +29,7 @@ list.add("BB");//elementData[1] = "BB";
 中的元素复制到新的数组中。
 
 小结：
-jdk1.7.0_07版本中：ArrayList类似于饿汉式
+jdk1.7.0_07版本中：ArrayList类似于饿汉式 (越靠近8的时候越来越相近！所以要看JDK7早些的版本)
 jdk1.8.0_271版本中：ArrayList类似于懒汉式
 
 二、Vector
@@ -37,8 +37,6 @@ jdk1.8.0_271版本中：ArrayList类似于懒汉式
 > 实现了List接口，存储有序的、可以重复的数据
 > 底层使用Object[]数组存储
 > 线程安全的
-
-
 
 2. Vector源码解析：(以jdk1.8.0_271为例)
 
@@ -49,12 +47,10 @@ v.add("BB");//elementData[1] = "BB";
 当添加第11个元素时，需要扩容。默认扩容为原来的2倍。
 
 
-
-
 三、LinkedList
 1. LinkedList的特点：
 > 实现了List接口，存储有序的、可以重复的数据
-> 底层使用双向链表存储
+> 底层使用[双向链表]存储
 > 线程不安全的
 
 
@@ -84,7 +80,7 @@ private static class Node<E> {
 2. ArrayList底层使用数组结构，查找和添加（尾部添加）操作效率高，时间复杂度为O(1)
                            删除和插入操作效率低，时间复杂度为O(n)
    LinkedList底层使用双向链表结构，删除和插入操作效率高，时间复杂度为O(1)
-                              查找和添加（尾部添加）操作效率高，时间复杂度为O(n) (有可能添加操作是O(1))
+                              查找和添加（尾部添加）操作效率高，时间复杂度为O(n) (有可能添加操作是O(1) -> 比如定义了last)
 
 3. 在选择了ArrayList的前提下，new ArrayList() : 底层创建长度为10的数组。
                           new ArrayList(int capacity):底层创建指定capacity长度的数组。
