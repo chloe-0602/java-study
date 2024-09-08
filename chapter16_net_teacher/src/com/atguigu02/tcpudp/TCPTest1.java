@@ -28,7 +28,7 @@ public class TCPTest1 {
         OutputStream os = null;
         try {
             //1. 创建一个Socket
-            InetAddress inetAddress = InetAddress.getByName("192.168.21.107"); //声明对方的ip地址
+            InetAddress inetAddress = InetAddress.getByName("127.0.0.1"); //声明对方的ip地址
             int port = 8989;//声明对方的端口号
             socket = new Socket(inetAddress, port);
 

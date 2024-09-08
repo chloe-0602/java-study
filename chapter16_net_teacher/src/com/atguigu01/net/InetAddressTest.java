@@ -39,11 +39,13 @@ public class InetAddressTest {
             System.out.println();
 
             //2.两个常用的方法
-//            System.out.println(inet1.getHostName());//192.168.23.31
-//            System.out.println(inet1.getHostAddress());//192.168.23.31
+            System.out.println(inet1.getHostName());//192.168.23.31
+            System.out.println(inet1.getHostAddress());//192.168.23.31
 
-//            System.out.println(inet2.getHostName());//www.atguigu.com
-//            System.out.println(inet2.getHostAddress());//122.228.95.175
+            System.out.println();
+
+            System.out.println(inet2.getHostName());//www.atguigu.com
+            System.out.println(inet2.getHostAddress());//122.228.95.175
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
