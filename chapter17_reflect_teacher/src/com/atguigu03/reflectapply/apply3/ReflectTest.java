@@ -74,7 +74,7 @@ public class ReflectTest {
 //        System.out.println(infoField.get(Person.class));
         //或 （仅限于类变量可以如下的方式调用）
         infoField.set(null,"我是一个人");
-        System.out.println(infoField.get(null));
+        System.out.println(infoField.get(null));// 可以从类中 使用null， 我已经知道是哪个类的 所以可以不用传
     }
 
     //********************如下是调用指定的方法************************
@@ -90,6 +90,7 @@ public class ReflectTest {
         Person per = (Person) clazz.newInstance();
 
         //1.通过Class的实例调用getDeclaredMethod(String methodName,Class ... args),获取指定的方法
+        // 不能用Integer.class
         Method showNationMethod = clazz.getDeclaredMethod("showNation",String.class,int.class);
 
         //2. setAccessible(true)：确保此方法是可访问的

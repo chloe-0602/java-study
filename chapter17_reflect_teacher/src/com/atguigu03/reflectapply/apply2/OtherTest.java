@@ -13,6 +13,7 @@ public class OtherTest {
 
     //（熟悉）获取运行时类的内部结构2：父类、接口们、包、带泛型的父类、父类的泛型等
     //1. 获取运行时类的父类
+          // 打印的结果没有泛型
     @Test
     public void test1() throws ClassNotFoundException {
         Class clazz = Class.forName("com.atguigu03.reflectapply.data.Person");

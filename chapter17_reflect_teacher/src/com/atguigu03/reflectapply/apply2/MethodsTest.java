@@ -40,7 +40,7 @@ public class MethodsTest {
             // 1.获取方法声明的注解
             Annotation[] annos = m.getAnnotations();
             for (Annotation a : annos) {
-                System.out.println(a);
+                System.out.println("annotation: "+a);
             }
 
             // 2.权限修饰符

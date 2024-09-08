@@ -71,7 +71,7 @@ public class ReflectionTest {
         //1. 调用私有的构造器，创建Person的实例
         //private Person(String name, int age)
         Class clazz = Person.class;
-        Constructor cons = clazz.getDeclaredConstructor(String.class,int.class);
+        Constructor cons = clazz.getDeclaredConstructor(String.class,int.class);//这一这里是int.class
         cons.setAccessible(true);
         Person p1 = (Person) cons.newInstance("Tom",12);
         System.out.println(p1);

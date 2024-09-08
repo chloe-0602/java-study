@@ -13,6 +13,10 @@ import org.junit.Test;
  */
 public class NewInstanceTest {
     @Test
+    /**
+     * InstantiationException: 没有构造器
+     * IllegalAccessException： 权限不够
+     */
     public void test1() throws InstantiationException, IllegalAccessException {
 
         Class clazz = Person.class;

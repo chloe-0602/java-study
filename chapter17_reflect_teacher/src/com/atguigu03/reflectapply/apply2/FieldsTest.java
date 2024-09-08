@@ -47,6 +47,8 @@ public class FieldsTest {
             int modifier = f.getModifiers();
             System.out.print(modifier + ":" + Modifier.toString(modifier) + "\t");
 
+            System.out.println();
+
             //2.数据类型
             Class type = f.getType();
             System.out.print(type.getName() + "\t");

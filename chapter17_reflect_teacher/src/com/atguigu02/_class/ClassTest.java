@@ -22,11 +22,16 @@ public class ClassTest {
         Class clazz1 = User.class;
         System.out.println(clazz1);
 
+        System.out.println();
+
         //2. 调用运行时类的对象的getClass()
+        // 类只会加载一次
         User u1 = new User();
         Class clazz2 = u1.getClass();
 
         //3. 调用Class的静态方法forName(String className)
+        // 这个更加容易体现动态性
+        // 所以在做框架的时候会大量使用
         String className = "com.atguigu02._class.User"; //全类名
         Class clazz3 = Class.forName(className);
 
@@ -45,7 +50,7 @@ public class ClassTest {
         Class c3 = String[].class;
         Class c4 = int[][].class;
         Class c5 = ElementType.class;
-        Class c6 = Override.class;
+        Class c6 = Override.class;//注解也可以
         Class c7 = int.class;
         Class c8 = void.class;
         Class c9 = Class.class;
@@ -54,7 +59,8 @@ public class ClassTest {
         int[] b = new int[100];
         Class c10 = a.getClass();
         Class c11 = b.getClass();
-        // 只要元素类型与维度一样，就是同一个Class
+        // 只要[元素类型]与[维度]一样，就是同一个Class
         System.out.println(c10 == c11);
+        System.out.println(c5 == c11);
     }
 }

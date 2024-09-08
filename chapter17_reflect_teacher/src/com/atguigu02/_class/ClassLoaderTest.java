@@ -33,7 +33,7 @@ public class ClassLoaderTest {
 
         //获取引导类加载器:失败
         ClassLoader classLoader3 = classLoader2.getParent();
-        System.out.println(classLoader3);//null
+        System.out.println(classLoader3);//null 没有获取成功，不是没有，而是不是用java写的
 
     }
 
