@@ -19,6 +19,10 @@ public class StringTest {
     @Test
     public void test1() throws Exception {
 
+        /**
+         * Unable to make field private final byte[] java.lang.String.value accessible
+         * JDK 17 新特性！
+         */
         Class clazz = Class.forName("java.lang.String");
 
         String obj = (String) clazz.newInstance();
