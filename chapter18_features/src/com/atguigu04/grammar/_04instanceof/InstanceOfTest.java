@@ -6,7 +6,7 @@ import org.junit.Test;
  * ClassName: InstanceOfTest
  * Package: com.atguigu04.grammer._04instanceof
  * Description:
- *      instanceof模式匹配
+ * instanceof模式匹配
  *
  * @Author: 尚硅谷-宋红康
  * @Create: 22:30
@@ -14,17 +14,17 @@ import org.junit.Test;
  */
 public class InstanceOfTest {
     /*
-    * 举例1：
-    * JDK14之前
-    * */
+     * 举例1：
+     * JDK14之前
+     * */
     @Test
-    public void test1(){
+    public void test1() {
         Object obj = new String("hello,Java14");
 
-        if(obj instanceof String){
+        if (obj instanceof String) {
             String str = (String) obj;
             System.out.println(str.contains("Java"));
-        }else{
+        } else {
             System.out.println("非String类型");
         }
     }
@@ -34,17 +34,23 @@ public class InstanceOfTest {
      * JDK14中
      * */
     @Test
-    public void test2(){
+    public void test2() {
 
+        Object obj = new String("hello,Java14");
 
+        if (obj instanceof String str) {
+            System.out.println(str.contains("Java"));
+        } else {
+            System.out.println("非String类型");
+        }
     }
 
 }
 
 /*
-* 举例2
-* */
-class Computer{
+ * 举例2
+ * */
+class Computer {
     private String model; //型号
     private double price;//价格
 
@@ -61,4 +67,13 @@ class Computer{
 
     //方式2：
 
+    public boolean equals(Object o) {
+        if (o instanceof Computer other &&
+                this.model.equals(other.model) &&
+                this.price == other.price) {
+            return true;
+        }
+
+        throw new RuntimeException("类型不匹配");
+    }
 }

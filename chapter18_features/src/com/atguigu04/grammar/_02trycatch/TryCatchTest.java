@@ -8,7 +8,7 @@ import java.io.*;
  * ClassName: TryCatchTest
  * Package: com.atguigu04.grammer.trycatch
  * Description:
- *      try-catch的新特性
+ * try-catch的新特性
  *
  * @Author: 尚硅谷-宋红康
  * @Create: 0:24
@@ -47,7 +47,14 @@ public class TryCatchTest {
      * */
     @Test
     public void test02() {
+        try (FileWriter fw = new FileWriter("test.txt");
+             BufferedWriter bw = new BufferedWriter(fw);
+        ) {
+            bw.write("hello!");
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /*
@@ -97,8 +104,24 @@ public class TryCatchTest {
      * */
     @Test
     public void test04() {
+        try (
+                FileInputStream fis = new FileInputStream("test.txt");
+                InputStreamReader isr = new InputStreamReader(fis, "utf-8");
+                BufferedReader br = new BufferedReader(isr);
 
-
+                FileOutputStream fos = new FileOutputStream("abc.txt");
+                OutputStreamWriter osw = new OutputStreamWriter(fos, "gbk");
+                BufferedWriter bw = new BufferedWriter(osw);
+        ) {
+            String str;
+            while ((str = br.readLine()) != null) {
+                bw.write(str);
+                bw.newLine();
+                bw.flush();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -110,7 +133,6 @@ public class TryCatchTest {
         OutputStreamWriter writer = new OutputStreamWriter(System.out);
         try (reader; writer) {
             //reader、writer是final的，不可再被赋值
-
 
 
         } catch (IOException e) {

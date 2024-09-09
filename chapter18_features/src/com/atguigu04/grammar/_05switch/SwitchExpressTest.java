@@ -51,7 +51,14 @@ public class SwitchExpressTest {
      * */
     @Test
     public void test2() {
-
+        Week day = Week.FRIDAY;
+        switch (day) {
+            case MONDAY -> System.out.println(1);
+            case TUESDAY, WEDNESDAY, THURSDAY -> System.out.println(2);
+            case FRIDAY -> System.out.println(3);
+            case SATURDAY, SUNDAY -> System.out.println(4);
+            default -> throw new RuntimeException("What day is today?" + day);
+        }
 
     }
 
@@ -61,8 +68,15 @@ public class SwitchExpressTest {
      * */
     @Test
     public void test3() {
-
-
+        Week day = Week.FRIDAY;
+        int res =  switch (day) {
+            case MONDAY -> 1;
+            case TUESDAY, WEDNESDAY, THURSDAY -> 2;
+            case FRIDAY -> 3;
+            case SATURDAY, SUNDAY -> 4;
+            default -> throw new RuntimeException("What day is today?" + day);
+        };
+        System.out.println(res);
 
     }
 
@@ -76,8 +90,23 @@ public class SwitchExpressTest {
     @Test
     public void test4() {
 
-
-
+        Week day = Week.FRIDAY;
+        int res =  switch (day) {
+            case MONDAY -> {
+                yield 1;
+            }
+            case TUESDAY, WEDNESDAY, THURSDAY -> {
+                yield 2;
+            }
+            case FRIDAY -> {
+                yield 3;
+            }
+            case SATURDAY, SUNDAY -> {
+                yield 4;
+            }
+            default -> throw new RuntimeException("What day is today?" + day);
+        };
+        System.out.println(res);
     }
 
     /*

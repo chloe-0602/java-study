@@ -37,7 +37,20 @@ public class SwitchPatternTest {
     * JDK17中switch的模式匹配
     * */
     static String formatterSwitchPattern(Object o) {
-
+//        String formatted = switch (o){
+//            case Integer i:
+//                yield "integer" + i;
+//            case Long l:
+//                yield "Long" + l;
+//
+//            formatted = "int " + i;
+//        } else if (o instanceof Long l) {
+//            formatted = "long " + l;
+//        } else if (o instanceof Double d) {
+//            formatted = "double " + d;
+//        } else if (o instanceof String s) {
+//            formatted = "String " + s;
+//        };
         return null;
     }
 }

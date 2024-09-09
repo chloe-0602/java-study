@@ -89,7 +89,7 @@ public class BlockTest {
     public void test7(){
         String newQuery1 = """
                 SELECT id,name,email \
-                FROM customers\s\
+                FROM customers\s\s
                 WHERE id > 4 \
                 ORDER BY email DESC
                 """;
